@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Mark Analyzer</title>
+</head>
+<body>
+
+<script>
+const studentMarks = [75, 82, 90, 60, 55];
+
+const total = studentMarks.reduce((acc, mark) => acc + mark, 0);
+const average = total / studentMarks.length;
+const result = average >= 40 ? "Pass" : "Fail";
+
+document.write("<h2>Student Marks Report</h2>");
+
+studentMarks.forEach((mark, index) => {
+    document.write(`Subject ${index + 1}: ${mark} <br>`);
+});
+
+document.write("<br>");
+document.write(`Total Marks: ${total} <br>`);
+document.write(`Average Marks: ${average.toFixed(2)} <br>`);
+document.write(`Final Result: ${result}`);
+</script>
+
+</body>
+</html>
