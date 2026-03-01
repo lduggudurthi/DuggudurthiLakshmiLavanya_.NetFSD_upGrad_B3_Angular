@@ -1,0 +1,45 @@
+h1 {
+    color: rgb(0, 139, 88);
+    text-align: center;
+}
+
+.intro {
+    font-size: 18px;
+    color: green;
+}
+
+.content-section {
+    background-color: lightgray;
+    border: 2px solid black;
+    padding: 15px;
+    margin: 20px;
+}
+
+.box {
+    background-color: lightyellow;
+    border: 3px solid orange;
+    padding: 20px;
+    margin: 30px;
+}
+
+form {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border: 2px solid #333;
+    width: 300px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+input[type="submit"] {
+    background-color: rgb(0, 195, 255);
+    color: rgb(161, 73, 73);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}

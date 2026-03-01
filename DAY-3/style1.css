@@ -1,0 +1,34 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.features {
+    width: 400px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.features h2 {
+    color: rgb(0, 137, 139);
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature-item {
+    background-color: white;
+    color: #333;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #00ff84;
+    border-radius: 8px;
+}
+
+.feature-item:hover {
+    background-color: #00ffc8;
+    color: white;
+}
