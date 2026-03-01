@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Task Manager</title>
+</head>
+<body>
+
+    <h2> Task Manager</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="listTasks()">List Tasks</button>
+
+    <div id="taskOutput"></div>
+
+    <script>
+        let tasks = [];
+
+        const addTaskPromise = (task) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (!task) {
+                        reject("Task cannot be empty");
+                    } else {
+                        tasks.push(task);
+                        resolve(`Task "${task}" added successfully.`);
+                    }
+                }, 1000);
+            });
+        };
+
+        const addTask = async () => {
+            const taskValue = document.getElementById("taskInput").value;
+
+            try {
+                const message = await addTaskPromise(taskValue);
+                document.getElementById("taskOutput").innerHTML = `<p>${message}</p>`;
+                document.getElementById("taskInput").value = "";
+            } catch (error) {
+                document.getElementById("taskOutput").innerHTML = `
+                    <p style="color:red;">Error: ${error}</p>
+                `;
+            }
+        };
+
+        const listTasks = async () => {
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            let output = "<h4>Task List:</h4>";
+            tasks.forEach((task, index) => {
+                output += `<p>${index + 1}. ${task}</p>`;
+            });
+
+            document.getElementById("taskOutput").innerHTML = output;
+        };
+    </script>
+
+</body>
+</html>

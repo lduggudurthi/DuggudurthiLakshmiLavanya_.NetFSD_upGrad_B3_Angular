@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Search</title>
+  <style>
+    body { font-family: Arial; }
+    li { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <h2>Product Search</h2>
+  <input type="text" id="searchInput" placeholder="Search products">
+
+  <ul id="productList"></ul>
+
+  <script>
+    const products = [
+      "Laptop",
+      "Mobile",
+      "Headphones",
+      "Keyboard",
+      "Mouse",
+      "Smart Watch"
+    ];
+
+    const productList = document.getElementById("productList");
+    const searchInput = document.getElementById("searchInput");
+
+    const displayProducts = (items) => {
+      productList.innerHTML = "";
+
+      if (items.length === 0) {
+        productList.innerHTML = "<p>No Results Found</p>";
+        return;
+      }
+
+      items.forEach(product => {
+        const li = document.createElement("li");
+        li.textContent = product;
+        productList.appendChild(li);
+      });
+    };
+
+    searchInput.addEventListener("input", (e) => {
+      const searchValue = e.target.value.toLowerCase();
+
+      const filtered = products.filter(product =>
+        product.toLowerCase().includes(searchValue)
+      );
+
+      displayProducts(filtered);
+    });
+
+    displayProducts(products);
+  </script>
+
+</body>
+</html>
