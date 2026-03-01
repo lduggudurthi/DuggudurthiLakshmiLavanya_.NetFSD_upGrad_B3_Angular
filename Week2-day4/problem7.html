@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polymorphism Example</title>
+</head>
+<body>
+
+<h2>Open Console to See Output</h2>
+
+<script>
+  // Base Class
+  class Payment {
+    pay(amount) {
+      console.log("Processing payment...");
+    }
+  }
+
+  // Subclasses
+  class CreditCardPayment extends Payment {
+    pay(amount) {
+      console.log(`Paid ₹${amount} using Credit Card`);
+    }
+  }
+
+  class UPIPayment extends Payment {
+    pay(amount) {
+      console.log(`Paid ₹${amount} using UPI`);
+    }
+  }
+
+  class CashPayment extends Payment {
+    pay(amount) {
+      console.log(`Paid ₹${amount} using Cash`);
+    }
+  }
+
+  // Creating Objects
+  const credit = new CreditCardPayment();
+  const upi = new UPIPayment();
+  const cash = new CashPayment();
+
+  credit.pay(500);
+  upi.pay(500);
+  cash.pay(500);
+
+</script>
+
+</body>
+</html>

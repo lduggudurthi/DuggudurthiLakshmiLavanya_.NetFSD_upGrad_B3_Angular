@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inheritance Example</title>
+</head>
+<body>
+
+<h2>Open Console to See Output</h2>
+
+<script>
+  // Base Class
+  class Vehicle {
+    constructor(brand, speed) {
+      this.brand = brand;
+      this.speed = speed;
+    }
+
+    displayInfo() {
+      console.log(`Brand: ${this.brand}, Speed: ${this.speed} km/h`);
+    }
+  }
+
+  // Derived Class
+  class Car extends Vehicle {
+    constructor(brand, speed, fuelType) {
+      super(brand, speed);  // calling parent constructor
+      this.fuelType = fuelType;
+    }
+
+    showCarDetails() {
+      console.log(`Fuel Type: ${this.fuelType}`);
+    }
+  }
+
+  const myCar = new Car("Toyota", 180, "Petrol");
+
+  myCar.displayInfo();     // Parent method
+  myCar.showCarDetails();  // Child method
+
+</script>
+
+</body>
+</html>
