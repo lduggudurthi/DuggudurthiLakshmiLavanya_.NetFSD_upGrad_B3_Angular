@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .product { margin-bottom: 15px; }
+        .confirmation { color: green; margin-left: 10px; }
+    </style>
+</head>
+<body>
+
+<h2>Cart: <span id="cartCount">0</span></h2>
+
+<div class="product">
+    Product 1 <button class="addBtn">Add to Cart</button>
+    <span class="msg"></span>
+</div>
+
+<div class="product">
+    Product 2 <button class="addBtn">Add to Cart</button>
+    <span class="msg"></span>
+</div>
+
+<div class="product">
+    Product 3 <button class="addBtn">Add to Cart</button>
+    <span class="msg"></span>
+</div>
+
+<div class="product">
+    Product 4 <button class="addBtn">Add to Cart</button>
+    <span class="msg"></span>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    var count = 0;
+
+    $(".addBtn").click(function(){
+
+        count++;
+        $("#cartCount").text(count);
+
+        $(this).prop("disabled", true);
+        $(this).next(".msg")
+            .text("Added!")
+            .addClass("confirmation");
+    });
+
+});
+</script>
+
+</body>
+</html>

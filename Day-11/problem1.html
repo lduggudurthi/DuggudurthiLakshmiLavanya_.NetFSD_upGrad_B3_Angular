@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Section</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .answer { display: none; margin-left: 20px; }
+        .active { color: blue; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h2>FAQ Section</h2>
+
+<div class="faq">
+    <h4 class="question">1. What is jQuery?</h4>
+    <p class="answer">jQuery is a JavaScript library.</p>
+
+    <h4 class="question">2. Why use jQuery?</h4>
+    <p class="answer">It simplifies DOM manipulation.</p>
+
+    <h4 class="question">3. What is slideToggle?</h4>
+    <p class="answer">It shows/hides content with animation.</p>
+
+    <h4 class="question">4. Is jQuery still used?</h4>
+    <p class="answer">Yes, in many legacy projects.</p>
+
+    <h4 class="question">5. What is CDN?</h4>
+    <p class="answer">Content Delivery Network.</p>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $(".question").click(function(){
+
+        $(".question").removeClass("active");
+        $(this).addClass("active");
+
+        $(this).next(".answer").slideToggle();
+    });
+
+});
+</script>
+
+</body>
+</html>
