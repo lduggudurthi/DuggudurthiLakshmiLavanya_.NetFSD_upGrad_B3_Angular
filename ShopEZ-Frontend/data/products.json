@@ -1,0 +1,22 @@
+[
+  {"id":1,"name":"Headphones","description":"High quality sound","price":2000,"image":"images/headphones.jpg"},
+  {"id":2,"name":"Bluetooth Speaker","description":"Loud and clear sound","price":1500,"image":"images/Bluetooth Speaker.jpg"},
+  {"id":3,"name":"Smart Watch","description":"Track your fitness","price":3000,"image":"images/Smart Watch.jpg"},
+  {"id":4,"name":"Tablet","description":"Portable device","price":12000,"image":"images/tablet.jpg"},
+  {"id":5,"name":"Keyboard","description":"Mechanical keyboard","price":800,"image":"images/keyboard.jpg"},
+  {"id":6,"name":"Mouse","description":"Wireless mouse","price":500,"image":"images/mouse.jpg"},
+  {"id":7,"name":"Gaming Chair","description":"Comfortable chair","price":7000,"image":"images/Gaming Chair.jpg"},
+  {"id":8,"name":"Monitor","description":"Full HD display","price":10000,"image":"images/monitor.jpg"},
+  {"id":9,"name":"Printer","description":"Color printer","price":9000,"image":"images/printer.jpg"},
+  {"id":10,"name":"Router","description":"High speed internet","price":2500,"image":"images/router.jpg"},
+  {"id":11,"name":"Power Bank","description":"Fast charging","price":1200,"image":"images/Power Bank.jpg"},
+  {"id":12,"name":"USB Cable","description":"Durable cable","price":200,"image":"images/USB Cable.jpg"},
+  {"id":13,"name":"Hard Disk","description":"1TB storage","price":5000,"image":"images/Hard Disk.jpg"},
+  {"id":14,"name":"Webcam","description":"HD camera","price":1800,"image":"images/Webcam.jpg"},
+  {"id":15,"name":"Microphone","description":"Clear voice recording","price":2200,"image":"images/Microphone.jpg"},
+  {"id":16,"name":"Projector","description":"Big screen experience","price":15000,"image":"images/projector.jpg"},
+  {"id":17,"name":"VR Headset","description":"Virtual reality","price":8000,"image":"images/VR Headset.jpg"},
+  {"id":18,"name":"Cooling Pad","description":"Laptop cooling","price":1000,"image":"images/Cooling Pad.jpg"},
+  {"id":19,"name":"Desk Lamp","description":"LED light","price":700,"image":"images/Desk Lamp.jpg"},
+  {"id":20,"name":"Smart Bulb","description":"Smart lighting","price":900,"image":"images/Smart Bulb.jpg"}
+]

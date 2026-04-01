@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #eef1f5;
+}
+
+/* MAIN LAYOUT */
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT */
+.left {
+  flex: 2;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+}
+
+/* CARD STYLE */
+.card-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row input {
+  flex: 1;
+}
+
+/* ORDER ITEM */
+.order-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.order-item img {
+  width: 70px;
+  height: 70px;
+}
+
+/* BUTTON */
+.btn-order {
+  background: #ff9900;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .container {
+    flex-direction: column;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT -->
+
+  <div class="left">
+    <div class="card-box">
+      <h3>Billing & Shipping</h3>
+
+
+  <div class="row">
+    <input placeholder="Full Name">
+    <input placeholder="Phone">
+  </div>
+
+  <input placeholder="Email">
+  <input placeholder="Address">
+
+  <div class="row">
+    <input placeholder="City">
+    <input placeholder="State">
+    <input placeholder="Pincode">
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="right">
+    <div class="card-box">
+      <h3>Order Summary</h3>
+
+
+  <div id="items"></div>
+
+  <hr>
+  <h4 id="total">Total: ₹0</h4>
+
+  <button class="btn-order" onclick="placeOrder()">
+    Place Order
+  </button>
+</div>
+
+
+  </div>
+
+</div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let total = 0;
+let container = document.getElementById("items");
+
+if(cart.length === 0){
+  container.innerHTML = "<p>Your cart is empty</p>";
+}else{
+  cart.forEach(item=>{
+    let qty = item.quantity || 1;
+    total += item.price * qty;
+
+    container.innerHTML += `
+      <div class="order-item">
+        <img src="${item.image}">
+        <div>
+          <p>${item.name}</p>
+          <small>₹${item.price} x ${qty}</small>
+        </div>
+      </div>
+    `;
+  });
+}
+
+document.getElementById("total").innerText = "Total: ₹" + total;
+
+function placeOrder(){
+  alert("Order placed!");
+  localStorage.removeItem("cart");
+}
+</script>
+
+</body>
+</html>

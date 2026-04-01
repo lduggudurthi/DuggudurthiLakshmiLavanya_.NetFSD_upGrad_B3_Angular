@@ -1,0 +1,155 @@
+# ShopEZ – E-Commerce Frontend Application
+
+**ShopEZ** is a modern, responsive frontend prototype of an e-commerce web application designed to demonstrate the implementation of core frontend development concepts using HTML5, CSS3, JavaScript, jQuery, and Bootstrap 5. This project focuses on product browsing, cart management, and checkout simulation, entirely on the client-side.
+
+---
+
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Technologies Used](#technologies-used)
+3. [Project Goal](#project-goal)
+4. [Learning Objectives](#learning-objectives)
+5. [Project Scope](#project-scope)
+6. [Functional Requirements](#functional-requirements)
+7. [Non-Functional Requirements](#non-functional-requirements)
+8. [Website Pages](#website-pages)
+9. [Website Navigation Flow](#website-navigation-flow)
+10. [UI Design Components](#ui-design-components)
+11. [Product Data Structure](#product-data-structure)
+12. [JavaScript Functional Modules](#javascript-functional-modules)
+13. [jQuery Events Used](#jquery-events-used)
+14. [Bootstrap Components Used](#bootstrap-components-used)
+15. [UI Wireframe (Conceptual)](#ui-wireframe-conceptual)
+16. [Testing Plan](#testing-plan)
+17. [Deliverables](#deliverables)
+18. [Evaluation Rubric](#evaluation-rubric)
+19. [Project Folder Structure](#project-folder-structure)
+20. [License](#license)
+21. [Contact](#contact)
+
+---
+
+## Project Overview
+ShopEZ allows users to:
+- Browse products in a card-based layout.
+- View detailed product information.
+- Add and remove products from the shopping cart.
+- Simulate a checkout process with order summary.
+
+All product data and cart information are managed on the client-side using **JSON data files**, **JavaScript objects**, and **LocalStorage**. No backend server is required.
+
+---
+
+## Technologies Used
+- **HTML5** – Structure and semantic markup.
+- **CSS3** – Styling and layout.
+- **JavaScript (ES6)** – Dynamic behavior and logic.
+- **Bootstrap 5** – Responsive UI components.
+- **jQuery** – DOM manipulation and events.
+- **LocalStorage** – Cart data persistence.
+- **JSON** – Product data storage.
+
+---
+
+## Project Goal
+Develop a fully functional frontend e-commerce interface that allows users to:
+- Browse and view product details.
+- Add and remove items from a shopping cart.
+- View an order summary.
+- Simulate a checkout process.
+- Prepare frontend structure for future backend API integration.
+
+---
+
+## Learning Objectives
+Participants will learn to:
+- Build responsive layouts with Bootstrap.
+- Implement dynamic functionality using JavaScript and jQuery.
+- Manage application state using LocalStorage.
+- Structure a frontend project with modular JS files.
+- Implement interactive UI elements and event handling.
+- Prepare frontend data for backend integration.
+
+---
+
+## Project Scope
+
+### Included Features
+- Product listing and details pages.
+- Shopping cart with add/remove functionality.
+- Checkout simulation.
+- Responsive UI using Bootstrap.
+- LocalStorage-based cart persistence.
+
+### Optional Features
+- Admin product management page.
+- Quantity update in cart.
+- Product filtering or category view.
+
+---
+
+## Functional Requirements
+
+### Product Browsing
+- View available products.
+- Navigate to product details.
+
+### Product Details
+- Display product image, name, description, and price.
+- Add to cart button.
+
+### Shopping Cart
+- Add and remove products.
+- View total cart value.
+- Store cart data in LocalStorage.
+
+### Checkout Simulation
+- Enter basic information (Name, Email, Address).
+- View order summary.
+- Simulate order placement (no real payment).
+
+---
+
+## Non-Functional Requirements
+| Requirement | Description |
+|-------------|-------------|
+| Usability | Simple and intuitive UI |
+| Responsiveness | Mobile-friendly layout using Bootstrap |
+| Performance | Fast-loading pages, smooth navigation |
+| Maintainability | Modular code structure, organized scripts |
+
+---
+
+## Website Pages
+| Page | Description |
+|------|-------------|
+| Home | Displays featured products |
+| Products | Shows full product catalog |
+| Product Details | Detailed product info |
+| Cart | Items added to cart |
+| Checkout | Order summary and checkout form |
+| Admin Products (Optional) | Add/edit products |
+
+---
+
+## Website Navigation Flow
+
+
+Home Page → Products Page → Cart Page → Checkout Page
+
+## UI Design Components
+
+### Home Page
+- Navigation bar
+- Featured products
+- Category highlights
+- Footer
+
+### Products Page
+- Card layout for all products
+- Product image, name, price, view details, add to cart buttons
+
+### Cart Page
+- Product name, quantity, price, remove button, total amount
+
+

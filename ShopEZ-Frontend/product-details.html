@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Details</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="container mt-4">
+  <div id="productDetails"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+$.getJSON("data/products.json", function(products){
+  let product = products.find(p => p.id == id);
+
+  $("#productDetails").html(`
+    <h2>${product.name}</h2>
+    <img src="${product.image}" width="200"/>
+    <p>${product.description}</p>
+    <h4>₹${product.price}</h4>
+
+    <button onclick='addToCart(${JSON.stringify(product)})'
+      class="btn btn-success">Add to Cart</button>
+  `);
+});
+</script>
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
